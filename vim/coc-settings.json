@@ -53,5 +53,6 @@
   // yaml setting
   "yaml.format.enable": true,
   "toml.formatter.reorderKeys": false,
-  "toml.formatter.alignEntries": true
+  "toml.formatter.alignEntries": true,
+  "snippets.ultisnips.pythonPrompt": false
 }
