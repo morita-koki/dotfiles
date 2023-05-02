@@ -206,6 +206,3 @@ augroup GitSpellCheck
 augroup END
 " }}}
 
-
-Plug 'ryanoasis/vim-devicons'
-

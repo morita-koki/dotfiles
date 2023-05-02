@@ -1,5 +1,4 @@
-
-# editor 
+# editor
 neovim
 pynvim>=0.4.3
 greenlet

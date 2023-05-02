@@ -84,7 +84,7 @@ fi
 # install pyenv
 if [ ! -e ~/.pyenv ]; then
 	echo "Installing pyenv..."
-	git clone hhtps://github.com/yyuu/pyenv.git -b v2.0.6 ~/.pyenv
+	git clone https://github.com/yyuu/pyenv.git -b v2.0.6 ~/.pyenv
 fi
 
 # pyenv init
@@ -126,7 +126,7 @@ TMPDIR=$(mktemp -d /tmp/XXXXX)
 if [ ! -e "${HOME}"/local/bin/nvim ]; then
 	echo "Installing neovim..."
 	cd "${HOME}"/local/bin
-	wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim.appimage
+	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim.appimage
 	chmod u+x nvim.appimage
 	if ./nvim.appimage --version >& /dev/null; then
 		ln -s ./nvim.appimage nvim
@@ -152,13 +152,13 @@ fi
 
 
 # clean up
-cd "$ROOTDOR"
+cd $ROOTDOR
 [ -e "$TMPDIR" ] && rm -rf "$TMPDIR"
 
 
 # install vim plugins
 echo "Installing vim plugins..."
-export PATH=${HOME}/local/bin:$PATH
+export PATH="${HOME}/local/bin:$PATH"
 [ ! -e ~/.cache/dein/repos/github.com/Shougo/dein.vim ] && \
 	git clone https://github.com/Shougo/dein.vim ~/.cache/dein/repos/github.com/Shougo/dein.vim
 nvim -c "try | call dein#install() | finally | qall! | endtry" -N -u "${HOME}"/.vim/init.vim -Vl -es
