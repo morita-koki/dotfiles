@@ -1,3 +1,8 @@
+## Environment
+
+Ubuntu 20.04 on WSL2(Windows11)
+
+
 ## Setup
 
 ```bash
@@ -13,3 +18,13 @@ $ ./install.sh
 # enable zsh environment
 $ exec zsh -l
 ```
+
+
+## Note
+
+nvimを実行して変なワーニングが表示されたら
+```
+:call dein#install()
+:call dein#update()
+```
+を実行
