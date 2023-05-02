@@ -22,7 +22,7 @@ $ exec zsh -l
 
 ## Note
 
-nvimを実行して変なワーニングが表示されたら
+nvimを実行して変なWarningが表示されたら
 ```
 :call dein#install()
 :call dein#update()
