@@ -74,7 +74,7 @@ zplug "wfxr/forgit", use:forgit.plugin.zsh
 zplug "b4b4r07/enhancd", use:init.sh
 # load theme from local
 # zplug "~/.zsh/themes/", from:local, use:bullet-train.zsh-theme, defer:3
-zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme, defer:3
+# zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme, defer:3
 
 # install check and then load
 zplug check || zplug install
@@ -150,6 +150,9 @@ fi
 
 # activate pyenv
 eval "$(pyenv init -)"
+
+# activate statship
+eval "$(starship init zsh)"
 
 
 export VOLTA_HOME="$HOME/.volta"

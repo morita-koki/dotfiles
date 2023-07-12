@@ -150,6 +150,12 @@ if [ ! -e "${HOME}"/local/bin/tmux ]; then
 	make -j && make install
 fi
 
+#install starship
+if [! -e /usr/local/bin/starship ]; then
+    echo "Installing starship..."
+    cd "$TMPDIR"
+    curl -sS https://starship.rs/install.sh | sh
+fi
 
 # clean up
 cd $ROOTDOR
